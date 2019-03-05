@@ -22,8 +22,6 @@ message MyMessage{
         Cat cat =4;
     }
 
-
-
 }
 
 message Person {

@@ -66,6 +66,12 @@ public class GrpcClient {
 //        studentRequestStreamObserver.onNext(StudentRequest.newBuilder().setAge(50).build());
 //
 //        studentRequestStreamObserver.onCompleted();
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
 
         StreamObserver<StreamRequest> requestStreamObserver =
                 stub.biTalk(new StreamObserver<StreamResponse>() {
