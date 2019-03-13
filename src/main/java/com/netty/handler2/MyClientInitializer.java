@@ -1,4 +1,4 @@
-package com.netty.handler;
+package com.netty.handler2;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -10,8 +10,6 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline pipeline = ch.pipeline();
 
-        pipeline.addLast(new MyByteToLongDecoder2());
-        pipeline.addLast(new MyLongToByteEncoder());
         pipeline.addLast(new MyClientHandler());
     }
 }
